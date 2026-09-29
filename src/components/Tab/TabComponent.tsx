@@ -1,4 +1,4 @@
-import { NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Tab } from '../../types/Tab';
 
 export const TabComponent = ({ tab }: { tab: Tab }) => {
@@ -6,7 +6,7 @@ export const TabComponent = ({ tab }: { tab: Tab }) => {
 
   return (
     <li data-cy="Tab" className={tabId === tab.id ? 'is-active' : ''}>
-      <NavLink to={`${tab.id}`}>{tab.title}</NavLink>
+      <Link to={`/tabs/${tab.id}`}>{tab.title}</Link>
     </li>
   );
 };
